@@ -60,7 +60,7 @@ function Claim(name, type, cost){
 
 // Determine percent covered and set claim variable
 function setPercentCovered(claim) {
-	console.log(claim);
+
 	switch(claim.visitType) {
 		case 'Emergency':
 			claim.percentCovered = 1;
@@ -83,6 +83,7 @@ function setPercentCovered(claim) {
 
 // Determine amount covered and set claim variable
 function setCoveredAmount(claim) {
+	
 	if (claim.percentCovered) {
 		claim.amountCovered = parseInt(claim.visitCost * claim.percentCovered);
 		totalPayedOut += claim.amountCovered;
